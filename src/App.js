@@ -7,7 +7,6 @@ import Statistics from './pages/Statistics';
 
 
 
-
 function App() {
   return (
     <Router>    
