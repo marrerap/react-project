@@ -1,26 +1,22 @@
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Covid19 from "../components/Covid-19";
 
 
-
-// function Page1() {
-  
-// db  
-  
+function Page1() {
   
 
-//   return (
-//     <div>
-//       <h1>Covid-19 Map</h1>
+  
+  
+
+  return (
+    <div>
+      <h1>Covid-19 Map</h1>
+        <Covid19 />
 
 
+    </div>
+  );
+}
 
-//     </div>
-//   );
-// }
+export default Page1;
 
-// export default Page1;
-
-
-const foo = [1,2,3]
-const [n ] = foo
-console.log(n)
