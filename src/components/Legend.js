@@ -1,9 +1,27 @@
 import React from 'react';
 
-const Legend = () => {
+
+const Legend = ({legendItems}) => {
+    console.log(legendItems)
     return ( 
-        <div>
-            
+        <div style={{
+            display: 'flex',
+            alignItems: 'stretch'
+        }}>
+          {legendItems.map((item) => (
+              <div 
+              key={item.title} 
+              style={{
+                  backgroundColor: item.color,
+                  flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: item.textColor,
+                  height: '10vh'
+                }}>
+                    <span>{item.title}</span></div>
+          ))}  
         </div>
      );
 }

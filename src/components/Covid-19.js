@@ -3,10 +3,12 @@ import Loading from "./Loading";
 import CovidMap from "./CovidMap";
 import Legend from "./Legend";
 import LoadStatesTask from "../tasks/LoadStatesTask";
+import legendItems from "../Entities/LegendItems";
 
 
 const Covid19 = () => {
   const [states, setStates] = useState([]);
+  const legendItemsInReverse = [...legendItems].reverse()
   const load = () => {
       const loadStatesTask = new LoadStatesTask();
       loadStatesTask.load(setStates)
@@ -20,8 +22,8 @@ const Covid19 = () => {
         <Loading />
       ) : (
         <div>
-          <CovidMap />
-          <Legend />
+          <CovidMap states={states} />
+          <Legend legendItems={legendItemsInReverse} />
         </div>
       )}
     </div>

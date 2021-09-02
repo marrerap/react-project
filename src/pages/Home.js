@@ -33,14 +33,14 @@ function Home() {
       <div className="row justify-content-center">
         {newsArticles.map((article, index) => {
           return (
-            <Card key={index} className='col-7' >
-              <Card.Header>{article.provider.name}</Card.Header>
+            <Card key={index} className='col-7' border='dark' style={{backgroundColor: '#17a3b84d'}}>
+              <Card.Header style={{backgroundColor: '#17a2b8'}}>{article.provider.name}</Card.Header>
               <Card.Body>
                 <Card.Title>{article.title}</Card.Title>
                 <Card.Text>
                   {article.excerpt}
                 </Card.Text>
-                <Button href={article.webUrl} variant="primary">See Full Story</Button>
+                <Button href={article.webUrl} variant="info">See Full Story</Button>
               </Card.Body>
             </Card>
           );
