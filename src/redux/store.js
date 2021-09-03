@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from "redux";
 import search from './reducers/Search'
+import results from './reducers/SetNewsResults'
 
 const rootReducer = combineReducers({
-    search: search
+    search: search,
+    results: results
 })
 
 const store = createStore(

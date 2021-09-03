@@ -10,7 +10,7 @@ function Page1() {
 
   return (
     <div>
-      <h1>Covid-19 Map Last 28 Days</h1>
+      <h1 >New Cases Last 28 Days</h1>
         <Covid19 />
 
 

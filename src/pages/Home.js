@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
+import { useDispatch, useSelector } from 'react-redux'
+import { actionSetNewsResults} from '../redux/actions/SetNewsResults'
 
 function Home() {
   const [newsArticles, setNewsArticles] = useState([]);
+  const dispatch = useDispatch()
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -15,15 +18,39 @@ function Home() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setNewsArticles(data.news);
-        console.log(newsArticles);
+        setNewsArticles(data.news)
+        
       });
   };
+
+  // const newsArticles = useSelector((state) => state.searchNewsResults)
+
+
+  //  use effect may be a solution
+  // useEffect(() => {
+  //   fetch("https://coronavirus-smartable.p.rapidapi.com/news/v1/US/", {
+  //     method: "GET",
+  //     headers: {
+  //       "x-rapidapi-host": "coronavirus-smartable.p.rapidapi.com",
+  //       "x-rapidapi-key": "af3bb10ebamsh1f28bed543e1fe7p1eb0a6jsnb7ffe74e4d98",
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data.news)
+  //       dispatch(actionSetNewsResults(data.news))
+        
+        
+  //     });
+    
+  // },[])
+
+
 
   return (
     <div>
         <div style={{marginBottom: '20px'}}>
-             <h1>Covid-19 Information</h1>
+             <h1>Covid-19 News</h1>
       <button onClick={handleClick}>Latest News</button>
         </div>
         <div>

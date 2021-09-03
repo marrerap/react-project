@@ -1,7 +1,11 @@
 .App {
   text-align: center;
-
+  font-family: 'Indie Flower', cursive; 
+  
+ 
 }
 
-
+body {
+  background-color: #88b37885 ; 
+}
 

@@ -22,7 +22,7 @@ const CovidMap = ({ states }) => {
     }
 
     return ( 
-        <div>
+        <div  >
            <MapContainer style={{height: '70vh'}} zoom={2.5} center={[49.82, -109.58]} >
         <GeoJSON style={mapStyle} data={states} onEachFeature={onEachState} />
            </MapContainer>

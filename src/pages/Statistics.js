@@ -3,26 +3,32 @@ import { Container } from "react-bootstrap";
 import LineGraph from "../components/LineGraph";
 import { useDispatch, useSelector } from "react-redux";
 import { actionSetSearch } from "../redux/actions/Search";
+import { actionSetNewsResults} from '../redux/actions/SetNewsResults'
+
 
 function Page2() {
-  const [statistics, setStatistics] = useState([]);
+  // const [statistics, setStatistics] = useState([]);
   const dispatch = useDispatch();
   const state = useSelector((state) => state.search);
   const stateURI = encodeURI(state)
+  const statistics = useSelector((state) => state.results)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(`https://disease.sh/v3/covid-19/states/${stateURI}`)
       .then((res) => res.json())
       .then((data) => {
-        setStatistics(data);
-        console.log(statistics)
+       dispatch(actionSetNewsResults(data))
+      console.log(data)
         });
   };
   const handleClear = (e) => {
     e.preventDefault();
-    setStatistics([]);
+    dispatch(actionSetNewsResults([]));
   };
+  
+
+
 
   return (
     <div>
