@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Button, Card } from "react-bootstrap";
-import { useDispatch, useSelector } from 'react-redux'
-import { actionSetNewsResults} from '../redux/actions/SetNewsResults'
+
+
 
 function Home() {
   const [newsArticles, setNewsArticles] = useState([]);
-  const dispatch = useDispatch()
+  
 
   const handleClick = (e) => {
     e.preventDefault();

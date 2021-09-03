@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import LineGraph from "../components/LineGraph";
 import { useDispatch, useSelector } from "react-redux";
