@@ -1,1 +1,1 @@
-This is a Covid-19 Information website that gives a list of the latest news regarding Covid-19 in the US, A Choropleth map displaying new cases for he past 28 days, and a statistics graph displaying numbers for certain types of information.
+This is a Covid-19 Information website that gives a list of the latest news regarding Covid-19 in the US, A Choropleth map displaying new cases for the past 28 days, and a statistics graph displaying numbers for certain types of information.
